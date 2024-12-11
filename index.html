@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora de Precios por Volumen o Masa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Precios por Volumen o Masa</h1>
+    <form id="price-form">
+      <div class="form-group">
+        <label for="type">Selecciona el tipo de medida:</label>
+        <select id="type" name="type">
+          <option value="volume">Volumen</option>
+          <option value="mass">Masa</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="value">Ingresa el valor (en litros o kilogramos):</label>
+        <input type="number" id="value" name="value" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Precio por unidad (por litro o kilogramo):</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+
+      <button type="submit">Calcular Precio</button>
+    </form>
+
+    <div id="result" class="result">
+      <h3>Precio Total: <span id="total-price">0</span> $</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
